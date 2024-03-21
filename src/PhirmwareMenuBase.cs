@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using LLama;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace OwlCore.AI.Phirmware;
@@ -8,12 +9,28 @@ namespace OwlCore.AI.Phirmware;
 /// </summary>
 public abstract class PhirmwareMenuBase : MenuBase
 {
+    /// <summary>
+    /// The <see cref="StatelessExecutor"/> used for inference.
+    /// </summary>
+    protected StatelessExecutor Executor { get; }
+
+    /// <summary>
+    /// Creates a new instance of <see cref="PhirmwareMenuBase"/>.
+    /// </summary>
+    /// <param name="executor"></param>
+    public PhirmwareMenuBase(StatelessExecutor executor)
+    {
+        Executor = executor;
+    }
+
     /// <inheritdoc />
-    public override abstract string MenuTitle { get; }
+    public override abstract string MenuTitle { get; set; }
     
     /// <inheritdoc />
-    public override Task<string> InferAsync(string systemMessage, string input)
+    public override async Task<string> InferCompletionAsync(string systemMessage, string input)
     {
-        throw new System.NotImplementedException();
+        var results = await Executor.InferAsync(string.Join("\n", systemMessage, input)).ToListAsync();
+
+        return string.Join("\n", results);
     }
 }
