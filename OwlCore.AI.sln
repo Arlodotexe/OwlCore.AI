@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwlCore.AI", "src\OwlCore.A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwlCore.AI.Tests", "tests\OwlCore.AI.Tests.csproj", "{296B048C-F31A-4555-AE05-B96F27399907}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwlCore.Console", "Owls\OwlCore.Console.csproj", "{AAD4DEF8-9E25-4475-8328-406E523047D7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{296B048C-F31A-4555-AE05-B96F27399907}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{296B048C-F31A-4555-AE05-B96F27399907}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{296B048C-F31A-4555-AE05-B96F27399907}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AAD4DEF8-9E25-4475-8328-406E523047D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AAD4DEF8-9E25-4475-8328-406E523047D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AAD4DEF8-9E25-4475-8328-406E523047D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AAD4DEF8-9E25-4475-8328-406E523047D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
