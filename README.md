@@ -1,21 +1,20 @@
-# OwlCore.AI.Phirmware [![Version](https://img.shields.io/nuget/v/OwlCore.AI.Phirmware.svg)](https://www.nuget.org/packages/OwlCore.AI.Phirmware)
+# OwlCore.AI [![Version](https://img.shields.io/nuget/v/OwlCore.AI.svg)](https://www.nuget.org/packages/OwlCore.AI)
 
-Build menu-based AI assistant firmware using the Phi family of language models.
+Tools and helpers for building AI and ML applications.
 
 ## Featuring:
-- x
-- y
-- z
+- Menus: Build firmware-inspired menus and have a large language model infer the option to pick given a user request. Only uses 2-4 tokens per menu inference. 
+- IModelInference: a basic inference abstraction for hot-swapping inference APIs (e.g. LlamaSharp vs OpenAI vs LMStudio)
 
 ## Install
 
-Published releases are available on [NuGet](https://www.nuget.org/packages/OwlCore.AI.Phirmware). To install, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
+Published releases are available on [NuGet](https://www.nuget.org/packages/OwlCore.AI). To install, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
-    PM> Install-Package OwlCore.AI.Phirmware
+    PM> Install-Package OwlCore.AI
     
 Or using [dotnet](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet)
 
-    > dotnet add package OwlCore.AI.Phirmware
+    > dotnet add package OwlCore.AI
 
 ## Usage
 

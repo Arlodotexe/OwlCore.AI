@@ -16,14 +16,14 @@
 		<Author>Arlo Godfrey</Author>
 		<Version>0.0.0</Version>
 		<Product>OwlCore</Product>
-		<Description></Description>
+		<Description>Tools and helpers for building AI and ML applications.</Description>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<PackageIcon>logo.png</PackageIcon>
-		<PackageProjectUrl>https://github.com/Arlodotexe/OwlCore.AI.Phirmware</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/Arlodotexe/OwlCore.AI</PackageProjectUrl>
 		<PackageReleaseNotes>
 --- 0.0.0 ---
 [New]
-Initial release of OwlCore.AI.Phirmware.
+Initial release of OwlCore.AI.
 		</PackageReleaseNotes>
 		<DebugType>embedded</DebugType>
 		<NeutralLanguage>en</NeutralLanguage>
