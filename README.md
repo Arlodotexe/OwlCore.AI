@@ -4,7 +4,7 @@ Tools and helpers for building AI and ML applications.
 
 ## Featuring:
 - Menus: Build firmware-inspired menus and have a large language model infer the option to pick given a user request. Only uses 2-4 tokens per menu inference. 
-- IModelInference: a basic inference abstraction for hot-swapping inference APIs (e.g. LlamaSharp vs OpenAI vs LMStudio)
+- IModelInference: a basic inference abstraction for hot-swapping inference APIs. Flexible enough for multimodal inference such as LlamaSharp, OpenAI, LMStudio, Whisper, etc.
 
 ## Install
 
