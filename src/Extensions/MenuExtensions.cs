@@ -91,22 +91,21 @@ public static class TextMenuExtensions
         var progress = new Progress<string>();
         progress.ProgressChanged += (sender, s) => Console.Write(s);
 
-        // Infer
-        infer:
+    // Infer
+    infer:
         var input = menuPrompt;
-        var result = await modelInference.InferAsync(input, progress, cancellationToken);
+        var result = await modelInference.InferAsync(input, progress, cancellationToken).AggregateAsync((x, y) => x + y, cancellationToken);
 
         // AI should be restricted to output 4 tokens.
-        // These could be:
+        // The output tokens could be:
         // - The number.
         // - The number in parentheses.
         // - If the label is short, it may output the label instead of the number.
         // - The label in parentheses.
-
         // only take the first integer output
         result = Regex.Match(result, @"\d+").Value;
-            
-        if(result.Trim() == string.Empty)
+
+        if (result.Trim() == string.Empty)
             goto infer;
 
         // We need to find the menu item that corresponds to the result.

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -15,8 +16,8 @@ public interface IModelInference<in TIn, TOut>
     /// Performs inference for this model.
     /// </summary>
     /// <param name="input">The input to the model.</param>
-    /// <param name="progress">If the inference can be streamed, partial progress is reported via this parameter.</param>
+    /// <param name="progress"></param>
     /// <param name="cancellationToken">A token that can be used to cancel the ongoing task.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation. The result is a completed output-typed result.</returns>
-    public Task<TOut> InferAsync(TIn input, IProgress<TOut> progress, CancellationToken cancellationToken);
+    public IAsyncEnumerable<TOut> InferAsync(TIn input, Progress<string> progress, CancellationToken cancellationToken);
 }
