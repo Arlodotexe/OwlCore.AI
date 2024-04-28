@@ -54,8 +54,6 @@ Initial release of OwlCore.AI.
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="LLamaSharp" Version="0.11.1" />
-		<PackageReference Include="LLamaSharp.Backend.Cpu" Version="0.11.1" />
 		<PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
 		<PackageReference Include="PolySharp" Version="1.14.1">
