@@ -87,14 +87,10 @@ public static class TextMenuExtensions
                           Select a Menu Item:
                           """;
 
-        // Setup progress
-        var progress = new Progress<string>();
-        progress.ProgressChanged += (sender, s) => Console.Write(s);
-
     // Infer
     infer:
         var input = menuPrompt;
-        var result = await modelInference.InferAsync(input, progress, cancellationToken).AggregateAsync((x, y) => x + y, cancellationToken);
+        var result = await modelInference.InferAsync(input, cancellationToken).AggregateAsync((x, y) => x + y, cancellationToken);
 
         // AI should be restricted to output 4 tokens.
         // The output tokens could be:
