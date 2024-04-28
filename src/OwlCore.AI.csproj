@@ -14,13 +14,17 @@
 		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
 
 		<Author>Arlo Godfrey</Author>
-		<Version>0.1.0</Version>
+		<Version>0.2.0</Version>
 		<Product>OwlCore</Product>
 		<Description>Tools and helpers for building AI and ML applications.</Description>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<PackageIcon>logo.png</PackageIcon>
 		<PackageProjectUrl>https://github.com/Arlodotexe/OwlCore.AI</PackageProjectUrl>
 		<PackageReleaseNotes>
+--- 0.2.0 ---
+[Breaking]
+Published remaining breaking changes intended for 0.1.0.
+
 --- 0.1.0 ---
 [Breaking]
 IModelInference previously used a Task with a single TOut result + a progress reporter. Since this arrangement only works when the implementation can implictly combine the reported progresses into a single result, this has been refactored to use IAsyncEnumerable instead. This means the caller now decides how to interpret and combine the yielded data for use, aggregating incremental multi-yields into the same value as a single-yield containing the entire result.
